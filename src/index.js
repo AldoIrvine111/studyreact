@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-let city = {
-  name: "Madrid",
-  country: "Spain"
+function Hello() {
+  return (
+  <div>
+    <h1>Welcome to React!</h1>
+    <p>Lets start learning</p>
+    <p>I'm using Component to write React UI</p>
+  </div>
+  )
 }
 
 ReactDOM.render(
-  <h1 id="heading" className="cool-text">
-    {city.name} is in {city.country}</h1> ,
+  <Hello /> ,
   document.getElementById('root')
 );
 
