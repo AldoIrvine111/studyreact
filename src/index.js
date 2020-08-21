@@ -2,20 +2,37 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const numberList = [1, 2, 3, 4, 5,]
-
-function App({ numbers }) {
+function Lake({ name }) {
   return (
     <div>
-      {numbers.map(number =>
-        <li key={number.toString()}>{number}</li>
-      )}
+      <h1>Visit {name}!</h1>
+    </div>)
+}
+
+function SkiResort({ name }) {
+  return (
+    <div>
+      <h1>Visit {name}!</h1>
+    </div>)
+}
+
+function App(props) {
+  return (
+    <div>
+      {props.season === "summer" ? (
+        <Lake name="Jenny Lake" />) :
+        props.season === "winter" ? (
+          <SkiResort name="JHMR" /> 
+        ) : (
+          <h1>Come back in Winter or Summer</h1>
+        )
+      }
     </div>
   )
 }
 
 ReactDOM.render(
-  <App numbers={numberList} />,
+  <App season="summer" />,
   document.getElementById('root')
 );
 
