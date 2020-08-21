@@ -30,4 +30,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+const [, , third] = ["Aldo", "Irvine", "3"];
+
+console.log(third) ;
+
+
 
