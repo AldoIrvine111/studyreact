@@ -1,38 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Lake() {
-  return (
-    <div>
-      <h1>Lake</h1>
-    </div>)
-}
-
-function SkiResort() {
-  return (
-    <div>
-      <h1>SkiResort</h1>
-    </div>)
-}
-
 function App() {
+  const [status, setStatus] = useState("Open");
   return (
-    <>
-      <Lake />
-      <SkiResort />
-    </>
+    <div>
+      <h1>Status : {status} </h1>
+      <button onClick={() => setStatus("Open")}>Open</button>
+      <button onClick={() => setStatus("Closed")}>Closed</button>
+      <button onClick={() => setStatus("Back in 5")}>Break</button>
+    </div>
   )
 }
 
 ReactDOM.render(
-  <App season="summer" />,
+  <App />,
   document.getElementById('root')
 );
 
-const [, , third] = ["Aldo", "Irvine", "3"];
-
-console.log(third) ;
 
 
 
