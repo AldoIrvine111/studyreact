@@ -4,7 +4,13 @@ import './index.css';
 
 
 ReactDOM.render(
-  React.createElement("h1",null,"Hello World"),
+  <div>
+  <ul>
+    <li>Aldo</li>
+    <li>Beatrice</li>
+    <li>Vio</li>
+  </ul>
+  </div>,
   document.getElementById('root')
 );
 
